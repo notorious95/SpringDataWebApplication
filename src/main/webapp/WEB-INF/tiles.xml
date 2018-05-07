@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="template1-def" template="/WEB-INF/jsp/layouts/template1/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/template1/header.jsp" />
+        <put-attribute name="nav" value="/WEB-INF/jsp/layouts/template1/nav.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/template1/footer.jsp" />
+    </definition>
+
+    <definition name="all_contracts" extends="template1-def">
+        <put-attribute name="title" value="Wszystkie umowy"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/all_contracts.jsp" />
+    </definition>
+
+    <definition name="contract_form" extends="template1-def">
+        <put-attribute name="title" value="Dodaj umowe"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/contract_form.jsp" />
+    </definition>
+
+    <definition name="info" extends="template1-def">
+        <put-attribute name="title" value="Informacje"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/info.jsp" />
+    </definition>
+
+    <definition name="active_contracts" extends="template1-def">
+        <put-attribute name="title" value="Aktywne umowy"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/active_contracts.jsp" />
+    </definition>
+
+    <definition name="soft" extends="template1-def">
+        <put-attribute name="title" value="Systemy"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/soft.jsp" />
+    </definition>
+
+</tiles-definitions>
